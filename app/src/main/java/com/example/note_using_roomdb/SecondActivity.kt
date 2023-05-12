@@ -4,6 +4,7 @@ import android.app.Activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import com.example.note_using_roomdb.database.AppDatabase
 import com.example.note_using_roomdb.databinding.ActivitySecondBinding
 import com.example.note_using_roomdb.models.NoteModel
@@ -28,6 +29,7 @@ class SecondActivity : AppCompatActivity() {
             GlobalScope.launch{
                 appDB.noteDao().insert(myobject)
             }
+            Toast.makeText(this, "Note added successfully", Toast.LENGTH_SHORT).show()
             startActivity(Intent(this, MainActivity::class.java))
         }
     }

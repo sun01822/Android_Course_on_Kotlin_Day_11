@@ -6,6 +6,16 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/favButton"
+        android:padding="5dp"
+        android:id="@+id/recyclerView"
+        tools:listitem="@layout/custom_layout"
+        />
+
+
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/favButton"
         android:layout_width="wrap_content"
