@@ -16,7 +16,6 @@ class SecondActivity : AppCompatActivity() {
     private lateinit var appDB : AppDatabase
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_second)
         binding = ActivitySecondBinding.inflate(layoutInflater)
         setContentView(binding.root)
         appDB = AppDatabase.initDatabase(this)
